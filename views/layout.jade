@@ -1,7 +1,26 @@
+mixin sideImage()
+    div(style='float:right;width:25%')
+        aside
+            img(src='/images/marshmallows-sm.jpg', alt='Cloud Candies homemade marshmallows', class='aside-image')
+
 doctype 5
 html
   head
     title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/style.min.css')
   body
-    block content
+    header.header
+        a(href='/')
+            h1 Cloud Candies
+            span.tagline All natural candies from the Pacific Northwest
+    div#spacer
+    nav.nav
+        ul
+            li: a(href='/') Index
+            li: a(href='buy') Where To Buy
+
+    div.content   
+        block content
+
+    footer.footer
+        &copy; 2013 Cloud Candies
